@@ -11,7 +11,6 @@ import {
 } from "@nextui-org/react";
 
 import carData from "../data/taladrod-cars.json";
-import { CardFooter } from "react-bootstrap";
 
 export default function HighlightedCars() {
   const [cars, setCars] = useState([]);

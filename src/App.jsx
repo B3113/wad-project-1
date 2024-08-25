@@ -7,7 +7,8 @@ function App() {
   return (
     <>
       <div id="sidebar">
-        <nav>
+        <nav className="flex gap-5 mt-4 p-4">
+          <p className="font-bold">Car Analytics</p>
           <a href={`/`}>Dashboard</a>
           <a href={`/highlighted`}>Highlight</a>
         </nav>
