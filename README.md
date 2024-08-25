@@ -18,9 +18,17 @@ The application allows market owners to highlight specific cars and manage these
 ## Screenshots
 
 ## Usage
+
+First, install the project
 ```Bash
 npm install
+```
+Second, run the project
+```Bash
 npm run dev
+```
+Then, build the project
+```Bash
 npm run build
 ```
 
