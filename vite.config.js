@@ -7,5 +7,5 @@ export default defineConfig({
     extend: {},
   },
   plugins: [react()],
-  base: "/dist",
+  base: "./dist",
 });
