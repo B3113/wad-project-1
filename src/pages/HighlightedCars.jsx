@@ -11,6 +11,7 @@ import {
 } from "@nextui-org/react";
 
 import carData from "../data/taladrod-cars.json";
+import { CardFooter } from "react-bootstrap";
 
 export default function HighlightedCars() {
   const [cars, setCars] = useState([]);
@@ -73,9 +74,26 @@ export default function HighlightedCars() {
         </Select>
         <Button
           onClick={handleSave}
-          color="primary"
-          variant="light"
-          className="h-12 rounded-full"
+          color="success"
+          variant="shadow"
+          className="h-14 w-32 rounded-2xl text-white"
+          endContent={
+            // plus icon
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+              />
+            </svg>
+          }
         >
           Add
         </Button>
@@ -83,27 +101,26 @@ export default function HighlightedCars() {
 
       <div className="mt-5 grid grid-cols-1 gap-4 p-6 md:grid-cols-2 xl:grid-cols-4">
         {savedCars.map((car) => (
-          <Card className=" mt-3">
-            <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
-              <div className="items-center flex flex-col">
-                <p className="text-tiny uppercase font-bold">{car.NameMMT}</p>
-                <p className="text-default-500">
-                  Price: {car.Prc} {car.Currency}
-                </p>
+          <Card className=" mt-3 p-2">
+            <CardBody className="overflow-visible  justify-between">
+              <div>
+                <img
+                  src={car.Img600}
+                  alt={car.NameMMT}
+                  className="w-full h-56 object-cover rounded-2xl"
+                />
+                <div className="flex flex-col mt-4">
+                  <p className="text-tiny uppercase font-bold">{car.NameMMT}</p>
+                  <p className="text-default-500">
+                    Price: {car.Prc} {car.Currency}
+                  </p>
+                </div>
               </div>
-            </CardHeader>
-            <CardBody className="overflow-visible py-2 items-center mt-1">
-              <img
-                src={car.Img100}
-                alt={car.NameMMT}
-                className="w-[180px] h-[160px] object-cover rounded-2xl"
-              />
-
               <Button
                 onClick={() => handleRemove(car.Cid)}
-                className="mt-1"
+                className="mt-4"
                 color="danger"
-                variant="light"
+                variant="bordered"
                 size="sm"
               >
                 Remove
