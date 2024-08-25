@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Button, Select, SelectItem } from "@nextui-org/react";
+import {
+  Button,
+  Select,
+  SelectItem,
+  Card,
+  CardHeader,
+  CardBody,
+  Image,
+  card,
+} from "@nextui-org/react";
 
 import carData from "../data/taladrod-cars.json";
 
@@ -48,13 +57,13 @@ export default function HighlightedCars() {
   };
 
   return (
-    <div className=" flex flex-col w-screen items-center">
+    <div className="mt-6 flex flex-col w-screen items-center">
       <div className="flex gap-4">
         <Select
           label="Highlight Cars"
           placeholder="Select a car"
           selectionMode="multiple"
-          className="w-[550px] rounded-full"
+          className="w-[250px] lg:w-[550px] rounded-full"
           selectedKeys={selectedKeys}
           onSelectionChange={setSelectedKeys}
         >
@@ -72,28 +81,36 @@ export default function HighlightedCars() {
         </Button>
       </div>
 
-      <div className="mt-4 flex">
-        <ul>
-          {savedCars.map((car) => (
-            <li key={car.Cid} className="flex items-center gap-4 mb-2">
-              <img src={car.Img100} alt={car.NameMMT} className="w-20 h-20" />
-              <div>
-                <p>{car.NameMMT}</p>
-                <p>
+      <div className="mt-5 grid grid-cols-1 gap-4 p-6 md:grid-cols-2 xl:grid-cols-4">
+        {savedCars.map((car) => (
+          <Card className=" mt-3">
+            <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
+              <div className="items-center flex flex-col">
+                <p className="text-tiny uppercase font-bold">{car.NameMMT}</p>
+                <p className="text-default-500">
                   Price: {car.Prc} {car.Currency}
                 </p>
               </div>
+            </CardHeader>
+            <CardBody className="overflow-visible py-2 items-center mt-1">
+              <img
+                src={car.Img100}
+                alt={car.NameMMT}
+                className="w-[180px] h-[160px] object-cover rounded-2xl"
+              />
+
               <Button
                 onClick={() => handleRemove(car.Cid)}
-                color="error"
+                className="mt-1"
+                color="danger"
                 variant="light"
                 size="sm"
               >
                 Remove
               </Button>
-            </li>
-          ))}
-        </ul>
+            </CardBody>
+          </Card>
+        ))}
       </div>
     </div>
   );
