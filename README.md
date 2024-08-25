@@ -1,4 +1,4 @@
-#Market Owner Dashboard
+## Market Owner Dashboard
 
 ## Project Description
 
@@ -17,7 +17,7 @@ The application allows market owners to highlight specific cars and manage these
 
 ## Screenshots
 
-## Useage
+## Usage
 ```Bash
 npm install
 npm run dev
