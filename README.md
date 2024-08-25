@@ -17,6 +17,11 @@ The application allows market owners to highlight specific cars and manage these
 
 ## Screenshots
 
+<img width="1448" alt="Screenshot 2567-08-25 at 23 27 08" src="https://github.com/user-attachments/assets/582d1e11-60b4-417f-896b-9594cdec5e13">
+<img width="1438" alt="Screenshot 2567-08-25 at 23 27 20" src="https://github.com/user-attachments/assets/3fbb805c-0022-452d-b838-ca46e61effe3">
+<img width="1440" alt="Screenshot 2567-08-25 at 23 27 43" src="https://github.com/user-attachments/assets/11dd5fb6-6305-4f1a-960a-c22a96cc3a79">
+
+
 ## Usage
 
 First, install the project
