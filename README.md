@@ -1,8 +1,31 @@
-# React + Vite
+#Market Owner Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+This web application is designed exclusively for market owners to manage and visualize car inventory data efficiently. 
+It provides insights into the number of cars by brand and model, as well as their values. 
+The application allows market owners to highlight specific cars and manage these selections easily.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Dashboard Page**: 
+  - A table showing the number of cars and their values by brand and model.
+  - A Pie Chart representing the distribution of cars by brand.
+  - A Stacked Bar Chart showcasing the models within a brand.
+- **Highlighted Cars Page**:
+  - Manage a list of highlighted cars.
+  - Options to add or remove cars from the highlight list.
+
+## Screenshots
+
+## Useage
+```Bash
+npm install
+npm run dev
+npm run build
+```
+
+## Team Members
+- Bhurichaya Thuraphan 6420134
+- Nanthanat Ounma 6411390
+
+
