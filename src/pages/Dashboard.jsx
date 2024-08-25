@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import CarTable from "../components/CarTable";
 import PieChart from "../components/PieChart";
 import BarChart from "../components/BarChart";
-import carData from "../data/taladrod-cars.json";
 import { Chart, ArcElement } from "chart.js";
+import carData from "../data/taladrod-cars.json";
 Chart.register(ArcElement);
 import {
   Chart as ChartJS,
